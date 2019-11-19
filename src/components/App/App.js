@@ -20,18 +20,31 @@ class App extends Component {
       entertainment,
       health,
       science,
-      technology
+      technology,
     }
   }
 
   changeCurrentPage = (event) => {
-    this.setState({ currentPage: event.target.id })
+    this.setState({ 
+      local,
+      entertainment,
+      health,
+      science,
+      technology,
+      currentPage: event.target.id })
+  }
+
+  filterSearches = (searchValue) => {
+    const searchedArticles = this.state[this.state.currentPage].filter(article => {
+      return article.description.includes(searchValue)
+    });
+    this.setState({ [this.state.currentPage]: searchedArticles })
   }
 
   render () {
     return (
       <div className="app">
-        <SearchForm />
+        <SearchForm searchHandler={this.filterSearches}/>
         <Menu clickHandler={event => this.changeCurrentPage(event)}/>
         <NewsContainer props={this.state[this.state.currentPage]} />
       </div>
