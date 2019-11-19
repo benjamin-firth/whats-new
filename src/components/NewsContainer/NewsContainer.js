@@ -1,15 +1,20 @@
 import React from 'react';
-import './NewsContainer.css'
+import './NewsContainer.css';
+import NewsArticle from '../NewsArticle/NewsArticle';
 
-const NewsContainer = ({ img, headline, description, url }) => {
+const NewsContainer = ({ props }) => {
   return (
-    <article className="articleBox">
-      <img src={img} alt='Article header background' className="articlePic"/>
-      <h3>{headline}</h3>
-      <hr/>
-      <p>{description}</p>
-      <a href={url}>Link to Article</a>
-    </article>
+    <main className="articleSection">
+      {props.map(article => {
+        return <NewsArticle 
+          img={article.img}
+          headline={article.headline}
+          description={article.description}
+          url={article.url}
+          key={article.id}
+        />
+      })}
+    </main>
   )
 }
 
