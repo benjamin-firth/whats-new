@@ -4,8 +4,11 @@
   padding: 0;
 }
 
-.app {
+body {
   background: #141527;
+}
+
+.app {
   display: flex;
   flex-wrap: wrap;
   height: 100vh;
