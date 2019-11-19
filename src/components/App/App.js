@@ -23,15 +23,19 @@ class App extends Component {
     }
   }
 
+  changeCurrentPage = (event) => {
+    this.setState({ currentPage: event.target.id })
+  }
+
   render () {
     return (
       <div className="app">
-        <Menu />
-        <button onClick={() => this.setState({ currentPage: 'science' })}>Science News!</button>
+        <Menu clickHandler={event => this.changeCurrentPage(event)}/>
+        {/* <button onClick={() => this.setState({ currentPage: 'science' })}>Science News!</button>
         <button onClick={() => this.setState({ currentPage: 'entertainment' })}>Entertainment News!</button>
         <button onClick={() => this.setState({ currentPage: 'health' })}>Health News!</button>
-        <button onClick={() => this.setState({ currentPage: 'technology' })}>technology News!</button>
-        <button onClick={() => this.setState({ currentPage: 'local' })}>Local News!</button>
+        <button onClick={() => this.setState({ currentPage: 'technology' })}>Technology News!</button>
+        <button onClick={() => this.setState({ currentPage: 'local' })}>Local News!</button> */}
         <NewsContainer props={this.state[this.state.currentPage]} />
       </div>
     );
