@@ -1,7 +1,18 @@
+.searchButton {
+  height: 30px;
+  width: 80px;
+}
+
 .searchForm {
   align-items: center;
   background-color: #DCD9BA;
   display: flex;
   height: 10%;
   width: 100%;
+}
+
+
+input {
+  height: 30px;
+  width: 20%;
 }
