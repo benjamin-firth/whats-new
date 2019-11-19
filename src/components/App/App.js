@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import local from '../../data/local';
 import './App.css';
 import NewsContainer from '../NewsContainer/NewsContainer';
+import NewsArticle from '../NewsArticle/NewsArticle';
 
 class App extends Component {
   constructor() {
@@ -9,21 +10,12 @@ class App extends Component {
     this.state = {
       local
     }
-    this.newsArticle = this.state.local.map(article => {
-      return <NewsContainer 
-        img={article.img}
-        headline={article.headline}
-        description={article.description}
-        url={article.url}
-        key={article.id}
-      />
-    })
   }
 
   render () {
     return (
       <div className="app">
-        {this.newsArticle}
+        <NewsContainer props={this.state.local} />
       </div>
     );
   }
