@@ -25,6 +25,10 @@
   width: 100%;
 }
 
+.articleLink:hover { 
+  background-color: #47A499;
+}
+
 h4 {
   color: #D4E9D9;
 }

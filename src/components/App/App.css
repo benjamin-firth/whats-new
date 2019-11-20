@@ -13,6 +13,10 @@ button {
   margin: 2% 2%;
 }
 
+button:hover { 
+  background-color: #47A499;
+}
+
 body {
   background: #252D33;
 }
