@@ -21,6 +21,7 @@ class App extends Component {
       health,
       science,
       technology,
+      allData: null
     }
   }
 
@@ -41,7 +42,15 @@ class App extends Component {
     this.setState({ [this.state.currentPage]: searchedArticles })
   }
 
+  componentDidMount() {
+    fetch('https://whats-new-api.herokuapp.com/api/v1/news')
+    .then(response => response.json())
+    .then(data => this.setState({allData: data}))
+    .catch(err => console.log(err))
+  }
+
   render () {
+    console.log(this.state.allData);
     return (
       <div className="app">
         <SearchForm searchHandler={this.filterSearches}/>
@@ -52,4 +61,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App
