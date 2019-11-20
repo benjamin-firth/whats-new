@@ -28,3 +28,7 @@ body {
   text-align: center;
   width: 100%;
 }
+
+#blockColorblindContent {
+  display: none;
+}
