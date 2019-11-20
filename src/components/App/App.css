@@ -5,18 +5,22 @@
 }
 
 button {
-  height: 25px;
+  border: 2px solid #252D33;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  height: 35px;
+  margin: 2% 2%;
 }
 
 body {
-  background: #141527;
+  background: #252D33;
 }
 
 .app {
   display: flex;
   flex-wrap: wrap;
   height: 100vh;
-  /* justify-content: center; */
   text-align: center;
   width: 100%;
 }
