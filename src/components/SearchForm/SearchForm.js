@@ -4,7 +4,7 @@ import './SearchForm.css';
 const SearchForm = ({ searchHandler }) => {
   return (
     <header className='searchForm'>
-      <h1>What's New!?</h1>
+      <h1>What's<span className='boldTitle'>New?</span></h1>
       <form>
         <input
           id='search'

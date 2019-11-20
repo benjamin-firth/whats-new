@@ -1,3 +1,8 @@
+.boldTitle {
+  color: #3effcf;
+  font-weight: 900;
+}
+
 .searchButton {
   height: 30px;
   width: 80px;
@@ -5,14 +10,30 @@
 
 .searchForm {
   align-items: center;
-  background-color: #DCD9BA;
+  /* background-color: #47A499; */
+  background-color: #252D33;
+  border-bottom: 5px solid #D4E9D9;
   display: flex;
   height: 10%;
   width: 100%;
 }
 
+form {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
 
 input {
   height: 30px;
   width: 20%;
+}
+
+h1 {
+  color: #D4E9D9;
+  font-size: 60px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-left: 5px;
 }
