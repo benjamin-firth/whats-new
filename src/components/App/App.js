@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import local from '../../data/local';
-import entertainment from '../../data/entertainment';
-import health from '../../data/health';
-import science from '../../data/science';
-import technology from '../../data/technology';
+// import local from '../../data/local';
+// import entertainment from '../../data/entertainment';
+// import health from '../../data/health';
+// import science from '../../data/science';
+// import technology from '../../data/technology';
 import './App.css';
 import NewsContainer from '../NewsContainer/NewsContainer';
 import Menu from '../Menu/Menu';
@@ -16,30 +16,32 @@ class App extends Component {
     super();
     this.state = {
       currentPage: 'local',
-      local,
-      entertainment,
-      health,
-      science,
-      technology,
-      allData: null
+      // local,
+      // entertainment,
+      // health,
+      // science,
+      // technology,
+      allData: {
+        local: []
+      }
     }
   }
 
   changeCurrentPage = (event) => {
-    this.setState({ 
-      local,
-      entertainment,
-      health,
-      science,
-      technology,
-      currentPage: event.target.id })
+    this.setState({ currentPage: event.target.id })
   }
 
   filterSearches = (searchValue) => {
-    const searchedArticles = this.state[this.state.currentPage].filter(article => {
+    const searchedArticles = this.state.allData[this.state.currentPage].filter(article => {
       return article.description.includes(searchValue)
     });
-    this.setState({ [this.state.currentPage]: searchedArticles })
+    this.setState({ 
+      allData: {
+        ...this.state.allData,
+        filteredData: searchedArticles
+      },
+      currentPage: 'filteredData',
+    })
   }
 
   componentDidMount() {
@@ -50,12 +52,11 @@ class App extends Component {
   }
 
   render () {
-    console.log(this.state.allData);
     return (
       <div className="app">
         <SearchForm searchHandler={this.filterSearches}/>
         <Menu clickHandler={event => this.changeCurrentPage(event)}/>
-        <NewsContainer props={this.state[this.state.currentPage]} />
+        <NewsContainer props={this.state.allData[this.state.currentPage]} />
       </div>
     );
   }
