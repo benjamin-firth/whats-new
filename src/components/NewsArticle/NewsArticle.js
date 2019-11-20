@@ -8,7 +8,11 @@ const NewsArticle = ({ img, headline, description, url }) => {
       <h3>{headline}</h3>
       <hr/>
       <p>{description}</p>
-      <a href={url}>Link to Article</a>
+      <a href={url}>
+        <div className='articleLink'>
+          <h4>Link to Article</h4>
+        </div>
+      </a>
     </article>
   )
 }
