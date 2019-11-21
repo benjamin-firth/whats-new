@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsContainer should match the snapshot 1`] = `
+<main
+  className="articleSection"
+>
+  <NewsArticle
+    description="my mock description"
+    headline="headline"
+    img="image"
+    key="1234"
+    url="www.google.com"
+  />
+</main>
+`;
