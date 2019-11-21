@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsArticle should match the snapshot 1`] = `
+<article
+  className="articleBox"
+>
+  <img
+    alt="Article header background"
+    className="articlePic"
+    src="image"
+  />
+  <h3>
+    headline
+  </h3>
+  <hr />
+  <p>
+    my mock description
+  </p>
+  <a
+    href="www.google.com"
+  >
+    <div
+      className="articleLink"
+    >
+      <h4>
+        Link to Article
+      </h4>
+    </div>
+  </a>
+</article>
+`;
