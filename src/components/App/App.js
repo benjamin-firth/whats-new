@@ -1,9 +1,4 @@
 import React, { Component } from 'react';
-// import local from '../../data/local';
-// import entertainment from '../../data/entertainment';
-// import health from '../../data/health';
-// import science from '../../data/science';
-// import technology from '../../data/technology';
 import './App.css';
 import NewsContainer from '../NewsContainer/NewsContainer';
 import Menu from '../Menu/Menu';
@@ -16,11 +11,6 @@ class App extends Component {
     super();
     this.state = {
       currentPage: 'local',
-      // local,
-      // entertainment,
-      // health,
-      // science,
-      // technology,
       allData: {
         local: []
       }
@@ -46,9 +36,9 @@ class App extends Component {
 
   componentDidMount() {
     fetch('https://whats-new-api.herokuapp.com/api/v1/news')
-    .then(response => response.json())
-    .then(data => this.setState({allData: data}))
-    .catch(err => console.log(err))
+      .then(response => response.json())
+      .then(data => this.setState({allData: data}))
+      .catch(err => console.log(err))
   }
 
   render () {
