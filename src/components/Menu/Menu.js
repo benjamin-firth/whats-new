@@ -4,11 +4,11 @@ import './Menu.css'
 const Menu = ({ clickHandler }) => {
   return (
     <nav className='navBar'>
-      <button id='science' onClick={event => clickHandler(event)}>Science</button>
-      <button id='entertainment' onClick={event => clickHandler(event)}>Entertainment</button>
-      <button id='health' onClick={event => clickHandler(event)}>Health</button>
-      <button id='technology' onClick={event => clickHandler(event)}>Technology</button>
-      <button id='local' onClick={event => clickHandler(event)}>Local</button>
+      <button id='science' onClick={clickHandler}>Science</button>
+      <button id='entertainment' onClick={clickHandler}>Entertainment</button>
+      <button id='health' onClick={clickHandler}>Health</button>
+      <button id='technology' onClick={clickHandler}>Technology</button>
+      <button id='local' onClick={clickHandler}>Local</button>
     </nav>
   )
 }
