@@ -6,31 +6,31 @@ exports[`Menu should match the snapshot 1`] = `
 >
   <button
     id="science"
-    onClick={[Function]}
+    onClick={[MockFunction]}
   >
     Science
   </button>
   <button
     id="entertainment"
-    onClick={[Function]}
+    onClick={[MockFunction]}
   >
     Entertainment
   </button>
   <button
     id="health"
-    onClick={[Function]}
+    onClick={[MockFunction]}
   >
     Health
   </button>
   <button
     id="technology"
-    onClick={[Function]}
+    onClick={[MockFunction]}
   >
     Technology
   </button>
   <button
     id="local"
-    onClick={[Function]}
+    onClick={[MockFunction]}
   >
     Local
   </button>
