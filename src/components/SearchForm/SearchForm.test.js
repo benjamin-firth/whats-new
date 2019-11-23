@@ -28,4 +28,6 @@ describe('SearchForm', () => {
     wrapper.find('button').simulate('click');
     expect(mockSearchHandler).toHaveBeenCalled();
   })
+
+  
 })
