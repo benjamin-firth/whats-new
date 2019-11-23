@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Menu.css'
 
 const Menu = ({ clickHandler }) => {
@@ -11,6 +12,10 @@ const Menu = ({ clickHandler }) => {
       <button id='local' onClick={clickHandler}>Local</button>
     </nav>
   )
+}
+
+Menu.propTypes = {
+  clickHandler: PropTypes.func
 }
 
 export default Menu;
